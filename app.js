@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
-const { DATABASE_URL, dbInfo } = require("./dbInfo/dbConfig");
+const { DATABASE_URL, dbInfo } = require(".env");
 
 let pool = mysql.createPool(dbInfo);
 
