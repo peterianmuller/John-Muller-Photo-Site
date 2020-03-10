@@ -2,7 +2,17 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
-const { DATABASE_URL, dbInfo } = require(".env");
+const dotenv = require("dotenv");
+dotenv.config();
+console.log(`Your user is ${process.env.user}`);
+
+const dbInfo = {
+  connectionLimit: 10,
+  host: process.env.host,
+  user: process.env.user,
+  password: process.env.password,
+  database: process.env.database
+};
 
 let pool = mysql.createPool(dbInfo);
 
