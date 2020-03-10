@@ -8,8 +8,8 @@ console.log(`Your user is ${process.env.user}`);
 
 const dbInfo = {
   connectionLimit: 10,
-  host: process.env.host,
-  user: process.env.user,
+  host: process.env.HOST,
+  user: process.env.USER,
   password: process.env.password,
   database: process.env.database
 };
