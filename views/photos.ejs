@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="photo-app.css" />
+    <title></title>
+  </head>
+  <body>
+    <nav>
+      <h1>John Muller Photography</h1>
+    </nav>
+    <div class="row">
+      <div class="column">
+        <% for (var i = 0; i < 4; i++) { %> <img src=<%=photos[i].url %> alt="">
+        <% } %>
+      </div>
+      <div class="column">
+        <% for (var i = 4; i < 8; i++) { %> <img src=<%=photos[i].url %> alt="">
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
