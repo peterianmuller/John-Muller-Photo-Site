@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const mysql = require("mysql");
 const { DATABASE_URL, dbInfo } = require("./dbInfo/dbConfig");
 
-var pool = mysql.createPool(dbInfo);
+let pool = mysql.createPool(dbInfo);
 
 // for parsing application/json
 app.use(bodyParser.json());
